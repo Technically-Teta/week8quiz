@@ -15,8 +15,12 @@ app.get('/api', (req, res) => {
 
 
 app.get('/getinfo/', async (req, res) => {
+
 const response = await fetch('https://opentdb.com/api.php?amount=10&category=11&difficulty=medium&type=multiple');
-const data = await response.json();
+//const data = await response.json();
+const rawData = await response.text(); // Get the response as a text
+const data = JSON.parse(rawData); // Parse the text as JSON
+
 console.log(data);
 res.json(data);
 });
