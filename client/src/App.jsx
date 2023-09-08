@@ -15,7 +15,6 @@
 
       const callForQuestion = async () => {
       const response = await fetch('http://localhost:8080/getinfo/');
-      //const data = await response.json();  -may uncomment this line
       const rawData = await response.text(); // Get the response as a text
       const data = JSON.parse(rawData); // Parse the text as JSON
 
@@ -70,8 +69,7 @@
   },[]);
 
   //NEED A MAXIMUM OF 10 QUESTIONS
- // WHAT EVENT CAN TRACK THE CORRECT/INCORRECT ANSWERS?
- // NEED SOME LOADING OF THE QUESTION SO THAT THE PARSING HAPPENS      
+ // WHAT EVENT CAN TRACK THE CORRECT/INCORRECT ANSWERS?    
  // HOW TO MOVE FROM ONE QUESTION TO THE NEXT QUESTION?
   return (
     <div className='App'>
@@ -83,7 +81,7 @@
       <div className='question-section'>
         <div className='question-container'>
         <div className='question-text'>
-          <h2>Question: {question}</h2>
+        <h2>Question: <span dangerouslySetInnerHTML={{__html: question}}/></h2>
           </div>
            </div>
             </div>
