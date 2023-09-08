@@ -5,6 +5,7 @@ const questionChoice = (props) => {
    let quiz = props.data.result;
    const answersArray= [props.quiz.correct_answer, ...quiz.incorrect_answers];
    
+   answersArray.sort()
 
 
     return (
