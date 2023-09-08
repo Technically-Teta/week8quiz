@@ -10,8 +10,12 @@ const questionChoice = (props) => {
    const questionController = (item) => {
    let correct = props.quiz.correct_answer;
    let result = false;
-  
+   if(item === correct){
+       result = true;
    }
+      props.setAnswer(result);
+   }
+
 
 
     return (
