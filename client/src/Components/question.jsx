@@ -7,6 +7,11 @@ const questionChoice = (props) => {
    
    answersArray.sort()
 
+   const questionController = (item) => {
+   let correct = props.quiz.correct_answer;
+  
+   }
+
 
     return (
       <div>
