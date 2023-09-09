@@ -87,7 +87,7 @@
             </div>
 
 
-            <div className="answer-section">
+            <div className="answerinfo-section">
         {incorrectAnswer.map((answer, index) => (
           <button className='btn' key={index} onClick={() => handleAnswerButtonClick(answer)}>
             {answer}
